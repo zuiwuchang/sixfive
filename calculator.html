@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>異世界 計算器</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div>
+        這裏只依據每月支出，和領取，以及時間來計算如果這比錢存到銀行，和買社保的差別。
+        至於個人實際每月支出多少能領取多少，請依據自己所在的異世界計算好後填入。
+    </div>
+
+
+    <p>
+        <label>當前年齡: (你從多少歲開始買)</label>
+        <br>
+        <input id="age" type="number">
+    </p>
+    <p>
+        <label>死亡年齡: (你預期活到多少歲)</label>
+        <br>
+        <input id="die" type="number">
+    </p>
+    <p>
+        <label>每月支出: (每個月你要支付多少錢，你實際付的錢，不包含公司支付等補貼)</label>
+        <br>
+        <input id="pay" type="number">
+    </p>
+
+    <p>
+        <label>買入多少個月: (從開始買計算，你總共要買多少個月，例如 12*15=180)</label>
+        <br>
+        <input id="pays" type="number">
+    </p>
+
+    <p>
+        <label>等待多少月: (從開始買計算你還要等多久可以領錢，例如 (65-30)*12=420)</label>
+        <br>
+        <input id="wait" type="number">
+    </p>
+    <p>
+        <label>每月領取: (退休後每月可以領多少錢)</label>
+        <br>
+        <input id="get" type="number">
+    </p>
+    <p>
+        <label>銀行年利息: (例如3表示年利息 3%)</label>
+        <br>
+        <input id="bank" type="number">%
+    </p>
+    <p>
+
+
+    <p>
+        <button id="go">計算</button>
+        <button id="reset">重置</button>
+    </p>
+    <p>
+    <pre style="color:red;" id="err"></pre>
+    </p>
+    <h1 id="end"></h1>
+    <p>
+    <table id="year"></table>
+    </p>
+    <p>
+    <table id="moon"></table>
+    </p>
+</body>
+
+<script src="js/calculator.js"></script>
+
+</html>
