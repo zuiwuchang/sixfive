@@ -11,6 +11,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 function ageString(age, moon) {
     return moon == 0 ? `${age}歲` : `${age}歲${moon}月`;
 }
+function getFloat2(v) {
+    return v.toFixed(2);
+}
 class View {
     constructor() {
         this.age_ = $("#age");
@@ -87,10 +90,10 @@ class View {
         const gethtml = (val) => {
             return `<tr>
 <td>${age}</td>
-<td>${Math.floor(opts.assets * 100) / 100}</td>
-<td>${Math.floor(opts.bankAssets * 100) / 100}</td>
-<td>${Math.floor(val * 100) / 100}</td>
-<td>${Math.floor(opts.total * 100) / 100}</td>
+<td>${getFloat2(opts.assets)}</td>
+<td>${getFloat2(opts.bankAssets)}</td>
+<td>${getFloat2(val)}</td>
+<td>${getFloat2(opts.total)}</td>
 </tr>`;
         };
         this.moon_.append(gethtml(opts.bank));
